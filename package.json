@@ -1,0 +1,19 @@
+{
+    "name": "gazbot-worker",
+    "version": "1.0.1",
+    "author": "nitlix",
+    "main": "./dist/exports.js",
+    "dependencies": {
+        "@types/bun": "^1.3.11",
+        "cloudflare": "^4.5.0",
+        "grammy": "^1.41.1",
+        "wrangler": "^4.79.0"
+    },
+    "description": "",
+    "keywords": [],
+    "license": "MIT",
+    "scripts": {
+        "wt": "wrangler types",
+        "ws": "wrangler dev"
+    }
+}

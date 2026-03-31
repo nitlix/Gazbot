@@ -1,0 +1,41 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+    "$schema": "node_modules/wrangler/config-schema.json",
+    "name": "gazbot-worker",
+    "main": "src/cloudflare/worker.ts",
+    "compatibility_date": "2026-03-31",
+    "compatibility_flags": ["nodejs_compat"],
+    "migrations": [
+        {
+            "new_classes": ["Server"],
+            "tag": "v1",
+        },
+    ],
+    "durable_objects": {
+        "bindings": [
+            {
+                "class_name": "Server",
+                "name": "SERVER",
+            },
+        ],
+    },
+    "triggers": {
+        "crons": ["* * * * *"],
+    },
+    "kv_namespaces": [
+        {
+            "binding": "CACHE",
+            "id": "YOUR_CACHE_ID",
+            "preview_id": "YOUR_CACHE_ID",
+            "remote": true,
+        },
+    ],
+    "observability": {
+        "enabled": true,
+    },
+    "keep_vars": true,
+    "vars": {},
+}
