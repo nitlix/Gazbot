@@ -19,7 +19,16 @@ export default {
             ok: true,
             message: "Igniting server",
         });
-        await server.fetch(new Request("https://gazbot.nitlix.net/ignite"));
+        if (!env.PUBLIC_BASE_URL) {
+            logger({
+                ok: false,
+                message:
+                    "PUBLIC_BASE_URL is not set; skipping scheduled ignition.",
+            });
+            return;
+        }
+
+        await server.fetch(new Request(`${env.PUBLIC_BASE_URL}/ignite`));
     },
 } satisfies ExportedHandler<Env>;
 

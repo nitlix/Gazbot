@@ -55,6 +55,7 @@ Set these via `wrangler secret put ...` / `wrangler kv:namespace ...` (recommend
 - **`TELEGRAM_BOT_TOKEN`**: token for your Telegram bot.
 - **`DISCORD_WEBHOOK_URL`** (optional): if set, the DO posts operational logs to Discord.
 - **`CACHE` KV namespace binding**: configure IDs in `wrangler.jsonc`.
+- **`PUBLIC_BASE_URL`**: the public URL of this Worker (used by the cron ignition ping). If unset, the cron ignition is skipped.
 
 #### Lakhta auth
 
