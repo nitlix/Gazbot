@@ -1,4 +1,4 @@
-<img src="https://static.nitlix.com/github/gazbot1.gif" alt="GazBot" style="width: 100%; height: auto;">
+<img src="https://raw.githubusercontent.com/nitlix/GithubAssets/refs/heads/main/gazbot/gazbot1.gif" alt="GazBot" style="width: 100%; height: auto;">
 
 <br />
 
